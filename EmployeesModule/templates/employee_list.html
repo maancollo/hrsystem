@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+<h1>register new customers</h1>
+
+
+<!--<form action="" method="POST">-->
+<!--  {{crfs_token }}-->
+<!--  {{form.as_p}}-->
+
+<!--</form>-->
+<a href="{% url 'employee_form' %}"></a>
+
+<table border="2" bgcolor="#ffe4c4">
+  <thead>
+  <tr>
+    <td>Full name</td>
+    <td>Mobile</td>
+    <td>Position</td>
+  </tr>
+  </thead>
+</table>
+<tb>
+  {% for Employees in employee_list %}
+<tr>
+  <td>{{employee.fullname}}</td>
+  <td>{{employee.mobile}}</td>
+  <td>{{employee.position}}</td>
+  <td>
+    <a href="{% url 'employee_update' employee.id %}"><button>UPDATE</button></a>
+  </td>
+  <td>
+    <a href="{% url 'employee_delete' employee.id %}">DELETE</a>
+  </td>
+</tr>
+
+{% endfor %}
+</tb>
+
+
+
+
+
+<!--{% endblock %}-->
+
+
+
+
+</body>
+</html>

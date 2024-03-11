@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{%  extends 'base.html' %}
+
+{% block content %}
+<h1>register new customers</h1>
+
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+<button type="submit" name="save">SUBMIT</button>
+</form>
+
+<a href="{% url 'employee_list' %}"> <button>back to list</button></a>
+
+
+{% endblock %}
+</body>
+</html>
